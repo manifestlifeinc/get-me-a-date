@@ -123,7 +123,8 @@
     }
   },
   "release": {
-    "publish": [{
+    "publish": [
+      {
         "path": "@semantic-release/npm",
         "npmPublish": false
       },
