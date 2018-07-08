@@ -9,12 +9,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hfreire/get-me-a-date.git"
+    "url": "git+https://github.com/manifestlifeinc/get-me-a-date.git"
   },
   "bugs": {
-    "url": "https://github.com/hfreire/get-me-a-date/issues"
+    "url": "https://github.com/manifestlifeincre/get-me-a-date/issues"
   },
-  "homepage": "https://github.com/hfreire/get-me-a-date#readme",
+  "homepage": "https://github.com/manifestlifeinc/get-me-a-date#readme",
   "dependencies": {
     "@angular/animations": "4.4.4",
     "@angular/cdk": "2.0.0-beta.11",
@@ -123,13 +123,13 @@
     }
   },
   "release": {
-    "publish": [
-      {
+    "publish": [{
         "path": "@semantic-release/npm",
         "npmPublish": false
       },
       "@semantic-release/github"
-    ]
+    ],
+    "analyzeCommits": "simple-commit-message"
   },
   "scripts": {
     "commit": "./node_modules/.bin/commit-wizard",
@@ -141,8 +141,8 @@
     "webpack:start": "./node_modules/.bin/webpack-dev-server --config ./webpack.start.js --progress --hot --content-base src/web",
     "compile": "npm run clean && npm run webpack",
     "semantic-release": "./node_modules/.bin/semantic-release",
-    "build": "DOCKER_REPO=hfreire NAME=$npm_package_name ./share/docker/hooks/build",
-    "push": "DOCKER_REPO=hfreire NAME=$npm_package_name ./share/docker/hooks/push",
+    "build": "DOCKER_REPO=manifestlife NAME=$npm_package_name ./share/docker/hooks/build",
+    "push": "DOCKER_REPO=manifestlife NAME=$npm_package_name ./share/docker/hooks/push",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "start": "node src/app.js"
   }

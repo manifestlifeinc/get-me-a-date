@@ -1,6 +1,6 @@
 FROM node:8.9.0
 
-MAINTAINER hugo@exec.sh
+LABEL maintainer="iking@lasell.edu"
 
 # Set app runtime environment variables
 ARG NPM_TOKEN
@@ -49,4 +49,4 @@ EXPOSE 3000
 ENTRYPOINT [ "/start.sh" ]
 
 HEALTHCHECK --start-period=10s --interval=5m --timeout=3s \
-  CMD nc -z localhost 3000 || exit 1
+    CMD nc -z localhost 3000 || exit 1
